@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configuración de fuentes personalizadas */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+}
+
+/* Ocultar scrollbar pero mantener funcionalidad */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* Forzar fondo sólido en el footer - eliminar cualquier patrón o línea */
+footer {
+  background-image: none !important;
+  background: #111827 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before,
+footer::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+footer *::before,
+footer *::after {
+  background-image: none !important;
+}
+
+footer * {
+  background-image: none !important;
+}
